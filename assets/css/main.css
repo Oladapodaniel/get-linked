@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Unica+One&display=swap');
+/* @import url('../fonts/ClashDisplay/Fonts/WEB/css/clash-display.css'); */
+
+@font-face {
+    font-family: "monserrat-reg";
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "monserrat-med-italic";
+    src: url("../fonts/Montserrat/static/Montserrat-MediumItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "monserrat-semibold-italic";
+    src: url("../fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "monserrat-semibold";
+    src: url("../fonts/Montserrat/static/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "clashdisplay-bold";
+    src: url("../fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Bold.otf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+.unica-one {
+    font-family: 'Unica One', cursive;
+}
+
+.monserrat-reg {
+    font-family: "monserrat-reg";
+}
+
+.monserrat-med-italic {
+    font-family: "monserrat-med-italic";
+}
+
+.monserrat-semibold-italic {
+    font-family: "monserrat-semibold-italic";
+}
+
+.monserrat-semibold {
+    font-family: "monserrat-semibold";
+}
+
+.clashdisplay-bold {
+    font-family: "clashdisplay-bold";
+}
+
+@media (min-width: 320px) {
+    .container {
+        max-width: 100% !important;
+    }
+}
+
+.active:focus {
+    background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 1s ease-in-out;
+}
+
+.primary-btn {
+    border-radius: 4px;
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%) !important;
+    width: 172px;
+    height: 53px;
+}
+
+.cover-bg {
+    background-color: #150e28;
+    min-height: 100vh;
+}
+
+.close-nav {
+    /* border: 1px solid; */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(180deg, #903AFF 0%, #FF26B9 100%);
+}
+
+.roll-in {
+    transform: rotate(90deg);
+    transition: all 1s ease;
+}
+
+.roll-out {
+    transform: rotate(0deg);
+    transition: all 1s ease;
+}
+
+.single-star {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: 15px;
+}
+
+.single-star-small {
+    position: relative;
+    top: 78px;
+    left: 70px;
+    width: 15px;
+}
+
+.purple-layer {
+    background-image: url("../images/Purple-Lens.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.bulbglow {
+    position: relative;
+    top: 14px;
+    right: 204px;
+}
+
+.position-contents {
+    position: relative;
+    top: 32px;
+    left: -85px;
+}
+
+.timeline-purple-star {
+    position: relative;
+    top: 20px;
+    left: 83px;
+    width: 20px;
+}
+
+.privacypolicy {
+    background-image: url('../images/padlock-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px) {
+    .glass {
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+img.virtual-svg {
+    animation: rotate 60s infinite linear;
+    /* Adjust the duration and animation properties as needed */
+}
+
+.success-modal {
+    border-radius: 5px !important;
+    border: 1px solid #D434FE !important;
+    background: rgba(255, 255, 255, 0.01) !important;
+}
+
+.success-modal-star {
+    position: absolute;
+    right: -25px;
+    top: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+   /* Animate the floating motion */
+   @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the float height as needed */
+    }
+}
+
+/* Apply the animation to the SVG image */
+.floating-image {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Transitins */
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
