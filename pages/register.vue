@@ -2,9 +2,6 @@
     <div class="container mx-auto" style="min-height: 90vh">
         <div class="grid md:grid-cols-6 gap-7 md:items-center text-white h-full">
             <div class="col-span-12 md:col-span-3">
-
-               
-
                 <div class="clashdisplay-bold text-white text-2xl text-left md:text-center mt-4 px-10 md:hidden">
                     <div class="text-[#D434FE]">Register</div>
                 </div>
