@@ -33,7 +33,7 @@
                   </div>
                   <div class="text-white monserrat-reg mt-4">Participate in getlinked tech Hackathon 2023 stand a chance to
                      win a Big prize</div>
-                  <button type="button" data-te-ripple-init data-te-ripple-color="light" @click="start"
+                  <button type="button" data-te-ripple-init data-te-ripple-color="light" @click="reloadpage(1)"
                      class="monserrat-reg primary-btn mt-4 mr-3 inline-block font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:text-primary-700 motion-reduce:transition-none">
                      Register
                   </button>
@@ -44,7 +44,7 @@
                   </div>
                </div>
                <div>
-                  <img src="../assets/images/man-wearing-smart.svg" style="filter: grayscale(100%); width: 100%" />
+                  <img src="../assets/images/man-wearing-smart.png" style="filter: grayscale(100%); width: 100%" />
                   <img src="../assets/images/virtual-reality.svg"
                      class="absolute bottom-0 w-[100%] md:w-[45%] virtual-svg" />
                </div>
@@ -591,6 +591,15 @@ onMounted(() => {
       }
    }, 1000);
 })
+
+const reloadpage = (type) => {
+    // window.location.reload(true)
+    if (type == 1) {
+        window.location.href = `${window.location.origin}/register`
+    } else {
+        window.location.href = `${window.location.origin}/contactus`
+    }
+}
 // const isScrolledIntoView = (e, el) => {
 //    console.log(e, 'event');
 //    console.log(el, 'undefinedd');
