@@ -10,41 +10,41 @@
             <div class="col-span-12 md:col-span-3">
                 <div class="glass p-10 pt-0 md:pt-10">
 
-                     <!-- Toast -->
-                <div v-if="toast"
-                    class="pointer-events-auto mx-auto mb-4 hidden w-96 max-w-full rounded-lg bg-danger-100 bg-clip-padding text-sm text-danger-700 shadow-lg shadow-black/5 data-[te-toast-show]:block data-[te-toast-hide]:hidden"
-                    id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-te-autohide="false"
-                    data-te-toast-init data-te-toast-show>
-                    <div
-                        class="flex items-center justify-between rounded-t-lg border-b-2 border-danger-200 bg-danger-100 bg-clip-padding px-4 pb-2 pt-2.5 text-danger-700">
-                        <p class="flex items-center font-bold text-danger-700">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle"
-                                class="mr-2 h-4 w-4 fill-current" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
-                                </path>
-                            </svg>
-                            Oops😔
-                        </p>
-                        <div class="flex items-center">
-                            <button type="button" 
-                                class="ml-2 box-content rounded-none border-none opacity-80 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-                                data-te-toast-dismiss aria-label="Close">
-                                <span @click="toast = false"
-                                    class="w-[1em] focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </span>
-                            </button>
+                    <!-- Toast -->
+                    <div v-if="toast"
+                        class="pointer-events-auto mx-auto mb-4 hidden max-w-full rounded-lg bg-danger-100 bg-clip-padding text-sm text-danger-700 shadow-lg shadow-black/5 data-[te-toast-show]:block data-[te-toast-hide]:hidden"
+                        id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-te-autohide="false"
+                        data-te-toast-init data-te-toast-show>
+                        <div
+                            class="flex items-center justify-between rounded-t-lg border-b-2 border-danger-200 bg-danger-100 bg-clip-padding px-4 pb-2 pt-2.5 text-danger-700">
+                            <p class="flex items-center font-bold text-danger-700">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle"
+                                    class="mr-2 h-4 w-4 fill-current" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
+                                    </path>
+                                </svg>
+                                Oops😔
+                            </p>
+                            <div class="flex items-center">
+                                <button type="button"
+                                    class="ml-2 box-content rounded-none border-none opacity-80 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+                                    data-te-toast-dismiss aria-label="Close">
+                                    <span @click="toast = false"
+                                        class="w-[1em] focus:opacity-100 disabled:pointer-events-none disabled:select-none disabled:opacity-25 [&.disabled]:pointer-events-none [&.disabled]:select-none [&.disabled]:opacity-25">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="break-words rounded-b-lg bg-danger-100 px-4 py-4 text-danger-700">
+                            {{ toastMessage }}
                         </div>
                     </div>
-                    <div class="break-words rounded-b-lg bg-danger-100 px-4 py-4 text-danger-700">
-                        {{ toastMessage }}
-                    </div>
-                </div>
                     <div class="clashdisplay-bold text-white text-2xl text-left md:text-center hidden md:block">
                         <div class="text-[#D434FE]">Register</div>
                     </div>
@@ -180,7 +180,7 @@
                 <div class="relative p-10">
                     <img src="../assets/images/purplestar.svg" class="w-[20px] success-modal-star" />
                     <div class="flex flex-col items-center">
-                        <img src="../assets/images/congratulation.svg"/>
+                        <img src="../assets/images/congratulation.svg" />
                         <div class="text-center text-white text-[32px] font-semibold font-['Montserrat'] mt-5">
                             Congratulations<br />you have successfully Registered!</div>
                         <div class="text-center text-white text-sm font-semibold font-['Montserrat'] leading-8 mt-4">Yes, it
@@ -196,6 +196,19 @@
     </div>
 </template>
 
+<!-- <script>
+export default {
+
+components: {},
+props: {},
+
+// This needs to be defined outside the setup block
+beforeRouteEnter(to, from, next) {
+console.log(to);
+},
+
+}
+</script> -->
 <script setup>
 import { onMounted } from "vue"
 import {
@@ -207,10 +220,27 @@ import {
     Toast
 } from "tw-elements";
 
+// import { reloadNuxtApp } from "nuxt/app";
+// reloadNuxtApp({
+//   path: "/register",
+//   ttl: 1000, // default 10000
+// });
+
+// definePageMeta({
+//   middleware: ["default"]
+//   // or middleware: 'isAdministrator'
+// })
+
+// const createpage = () => {
+    
+// }
+// createpage()
+
 onMounted(() => {
     initTE({ Input, Select, Ripple, Modal, Toast });
     getCategory()
 })
+
 
 const category = ref([]);
 const form = ref({

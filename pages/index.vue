@@ -23,7 +23,7 @@
                   <span class="flex justify-end">
                      <img src="../assets/images/lightbulb.gif" class="w-[100px] bulbglow" />
                   </span>
-                  <div class="clashdisplay-bold text-white text-5xl md:text-6xl text-center md:text-left">
+                  <div class="clashdisplay-bold text-white text-4xl md:text-6xl text-center md:text-left">
 
                      <Typed :options="options">
                         <h1 class="typing inline"></h1>
@@ -552,7 +552,6 @@ import {
    Ripple,
    initTE,
 } from "tw-elements";
-
 
 const options = {
    strings: ["getlinked Tech <br /> Hackathon <span class='text-[#D434FE]'>1.0</span>"],

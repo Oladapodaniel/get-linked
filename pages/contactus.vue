@@ -36,7 +36,7 @@
 
                     <!-- Toast -->
                     <div v-if="toast"
-                        class="pointer-events-auto mx-auto mb-4 hidden w-96 max-w-full rounded-lg bg-danger-100 bg-clip-padding text-sm text-danger-700 shadow-lg shadow-black/5 data-[te-toast-show]:block data-[te-toast-hide]:hidden"
+                        class="pointer-events-auto mx-auto mb-4 hidden max-w-full rounded-lg bg-danger-100 bg-clip-padding text-sm text-danger-700 shadow-lg shadow-black/5 data-[te-toast-show]:block data-[te-toast-hide]:hidden"
                         id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-te-autohide="false"
                         data-te-toast-init data-te-toast-show>
                         <div

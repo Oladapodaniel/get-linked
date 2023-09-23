@@ -24,7 +24,7 @@
                 <span>
 
                     <div class="close-nav flex justify-center items-center" v-show="displayNav">
-                        <div class="flex justify-center items-center h-[20px] w-[20px] rounded-full cover-bg ">
+                        <div class="flex justify-center items-center h-[20px] w-[20px] rounded-full bg-[#150e28]">
                             <img src="../assets/images/close-nav.png" ref="closeref" />
                         </div>
                     </div>
@@ -61,19 +61,19 @@
                         </li>
                         <!-- Pricing link -->
                         <li class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1 mr-12" data-te-nav-item-ref>
-                            <NuxtLink to="/contactus">
-                                <a class=" monserrat-semibold p-0 text-white transition duration-200 hover:ease-in-out focus:bg-gradient-to-r focus:from-purple-500 focus:to-pink-500 focus:bg-clip-text focus:text-transparent focus:transition focus:duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:bg-clip-text hover:text-transparent hover:transition hover:duration-300 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            <!-- <NuxtLink to="/contactus"> -->
+                                <a @click="reloadpage(2)" class=" monserrat-semibold p-0 text-white transition duration-200 hover:ease-in-out focus:bg-gradient-to-r focus:from-purple-500 focus:to-pink-500 focus:bg-clip-text focus:text-transparent focus:transition focus:duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:bg-clip-text hover:text-transparent hover:transition hover:duration-300 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                                     href="#" data-te-nav-link-ref>Contacts</a>
-                            </NuxtLink>
+                            <!-- </NuxtLink> -->
                         </li>
 
                     </ul>
-                    <NuxtLink to="/register">
-                        <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                    <!-- <NuxtLink to="/register"> -->
+                        <button @click="reloadpage(1)" type="button" data-te-ripple-init data-te-ripple-color="light"
                             class="monserrat-reg primary-btn mr-3 inline-block font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:text-primary-700 motion-reduce:transition-none">
                             Register
                         </button>
-                    </NuxtLink>
+                    <!-- </NuxtLink> -->
 
                 </div>
             </div>
@@ -95,6 +95,15 @@ onMounted(() => {
 
 const displayNav = ref(false)
 const closeref = ref(null)
+
+const reloadpage = (type) => {
+    // window.location.reload(true)
+    if (type == 1) {
+        window.location.href = `${window.location.origin}/register`
+    } else {
+        window.location.href = `${window.location.origin}/contactus`
+    }
+}
 
 const toggleNav = () => {
     displayNav.value = !displayNav.value
