@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto py-10">
-        <div class="grid md:grid-cols-12 gap-7 text-white">
+        <div class="grid md:grid-cols-12 md:gap-7 text-white">
             <div class="col-span-12 md:col-span-6">
                 <img class="" src="../assets/images/getlinked.svg" alt="getlinked" loading="lazy" />
                 <div class="mt-4 monserrat-reg text-sm leading-7 mb-10">

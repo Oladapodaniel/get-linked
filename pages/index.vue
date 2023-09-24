@@ -5,7 +5,7 @@
          class="text-white monserrat-semibold-italic text-lg lg:text-3xl py-7 lg:px-10 flex justify-center lg:justify-between">
          <img src="../assets/images/star.svg" class="single-star-small lg:single-star" />
          <!-- <img src="../assets/images/Purple-Lens.svg" class="absolute z-10" /> -->
-         <div>
+         <div class="absolute right-0 px-3">
             <Typed :options="mantra">
                <div class="typing inline"></div>
             </Typed>
@@ -46,7 +46,7 @@
                <div>
                   <img src="../assets/images/man-wearing-smart.png" style="filter: grayscale(100%); width: 100%" />
                   <img src="../assets/images/virtual-reality.svg"
-                     class="absolute bottom-0 w-[100%] md:w-[45%] virtual-svg" />
+                     class="absolute bottom-0 w-[80%] sm:w-[100%] md:w-[45%] virtual-svg" />
                </div>
             </div>
          </div>
@@ -571,7 +571,7 @@ const mantra = {
 //     typeSpeed: 40,
 // };
 
-const hour = ref(5);
+const hour = ref(4);
 const minutes = ref(60);
 const seconds = ref(60);
 
@@ -584,8 +584,8 @@ onMounted(() => {
       if (seconds.value == 0) {
          seconds.value = 60
          minutes.value -= 1
-         if (minutes.value == 0) {
-            minutes.value = 60
+         if (minutes.value == 59) {
+            // minutes.value = 60
             hour.value -= 1
          }
       }
