@@ -46,7 +46,7 @@
                <div>
                   <img src="../assets/images/man-wearing-smart.png" style="filter: grayscale(100%); width: 100%" />
                   <img src="../assets/images/virtual-reality.svg"
-                     class="absolute bottom-0 w-[80%] sm:w-[100%] md:w-[45%] virtual-svg" />
+                  class="absolute bottom-0  virtual-svg xs:w-[80%] sm:w-[100%] md:w-[45%]" />
                </div>
             </div>
          </div>
