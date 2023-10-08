@@ -201,6 +201,20 @@ img.virtual-svg {
     animation: float 2s ease-in-out infinite;
 }
 
+/* Animate stars */
+@keyframes scale {
+ 0%, 100% {
+     transform: scale(0.5);
+ }
+ 50% {
+     transform: scale(1.5); /* Adjust the float height as needed */
+ }
+}
+
+.scale-star {
+    animation: scale 1.5s ease-in-out infinite;
+}
+
 /* Transitins */
 .v-enter-active,
 .v-leave-active {

@@ -3,7 +3,7 @@
    <div class="">
       <div
          class="text-white monserrat-semibold-italic text-lg lg:text-3xl py-7 lg:px-10 flex justify-center lg:justify-between">
-         <img src="../assets/images/star.svg" class="single-star-small lg:single-star" />
+         <img src="../assets/images/star.svg" class="single-star-small lg:single-star scale-star" />
          <!-- <img src="../assets/images/Purple-Lens.svg" class="absolute z-10" /> -->
          <div class="absolute right-0 px-3">
             <Typed :options="mantra">
@@ -57,10 +57,12 @@
             <div class="grid md:grid-cols-2 gap-10 items-center text-white ">
                <img src="../assets/images/bigidea.svg" class="floating-image" />
                <div class="">
-                  <div class="clashdisplay-bold text-white text-4xl text-center md:text-left">
-                     Introduction to getlinked <br /><span class='text-[#D434FE]'>tech Hackathon 1.0</span>
+                  <div ref="elementone">
+                  <Typed :options="introduction" v-if="toggleIntroduction">
+                     <div class="typing clashdisplay-bold text-white text-4xl text-center md:text-left" ></div>
+                     </Typed>
                   </div>
-                  <div class="monserrat-reg text-white leading-7 mt-5 text-center md:text-left">
+                  <div class="monserrat-reg text-white leading-7 mt-5 text-center md:text-left" data-aos="fade-right">
                      Our tech hackathon is a melting pot of visionaries, and its purpose is as
                      clear as day: to shape the future. Whether you're a coding genius, a
                      design maverick, or a concept wizard, you'll have the chance to transform
@@ -78,9 +80,12 @@
             <div class="grid md:grid-cols-2 gap-10 items-center text-white ">
                <img src="../assets/images/lady-sitting.svg" class="floating-image md:hidden" />
                <div class="">
-                  <div class="clashdisplay-bold text-white text-4xl text-center md:text-left">Rules and <br /><span
-                        class="text-[#D434FE]">Guidelines</span></div>
-                  <div class="monserrat-reg text-white leading-7  mt-5 text-center md:text-left">
+                  <div ref="elementtwo">
+                  <Typed :options="rules" v-if="toggleRules">
+                    <div class="typing clashdisplay-bold text-white text-4xl text-center md:text-left" ></div>
+                  </Typed>
+                  </div>
+                  <div class="monserrat-reg text-white leading-7  mt-5 text-center md:text-left" data-aos="fade-right">
                      Our tech hackathon is a melting pot of visionaries, and its purpose is as
                      clear as day: to shape the future. Whether you're a coding genius, a
                      design maverick, or a concept wizard, you'll have the chance to transform
@@ -99,8 +104,11 @@
             <div class="grid md:grid-cols-2 gap-10 items-center text-white ">
                <img src="../assets/images/judges.svg" class="floating-image w-full" />
                <div class="text-center md:text-left">
-                  <div class="clashdisplay-bold text-white text-4xl">Judging Criteria <br /><span
-                        class="text-[#D434FE]">Key attributes</span></div>
+                  <div ref="elementthree">
+                  <Typed :options="judge" v-if="toggleJudge">
+                    <div class="typing clashdisplay-bold text-white text-4xl"></div>
+                  </Typed>
+                  </div>
                   <div class="monserrat-reg text-white leading-7  mt-5">
                      <span class="text-[#FF26B9] monserrat-semibold ">Innovation and Creativity</span>: Evaluate the
                      uniqueness and creativity
@@ -146,8 +154,11 @@
          <div class="container mx-auto py-[6rem]">
             <div class="grid md:grid-cols-2 gap-10 items-center text-white ">
                <div class="text-center md:text-left">
-                  <div class="clashdisplay-bold text-white text-4xl">Frequently Ask<br /><span
-                        class="text-[#D434FE]">Question</span></div>
+                  <div ref="elementfour">
+                  <Typed :options="questions" v-if="toggleQuestions">
+                    <div class="typing clashdisplay-bold text-white text-4xl"></div>
+                  </Typed>
+                  </div>
                   <div class="monserrat-reg text-white leading-7  mt-5">
                      We got answers to the questions that you might
                      want to ask about getlinked Hackathon 1.0
@@ -240,7 +251,7 @@
                <div class="">
                   <div class="flex justify-center position-contents">
                      <img src="../assets/images/small-question.svg" class="mt-5" />
-                     <img src="../assets/images/purplestar.svg" style="position: relative; left: 20px;" />
+                     <img src="../assets/images/purplestar.svg" class="scale-star" style="position: relative; left: 20px;" />
                      <img src="../assets/images/big-question.svg" class="mx-12" />
                      <img src="../assets/images/small-question.svg" class="mt-5" />
                   </div>
@@ -254,13 +265,17 @@
       <div class="">
          <div class="container mx-auto py-[6rem]">
             <div class="text-center">
-               <div class="clashdisplay-bold text-white text-4xl">Timelines</div>
+               <div ref="elementfive">
+                  <Typed :options="timelines" v-if="toggleTimelines">
+                    <div class="typing clashdisplay-bold text-white text-4xl"></div>
+                  </Typed>
+                  </div>
                <div class="monserrat-reg text-white mt-5">
                   Here is the breakdown of the time we anticipate<br />
                   using for the upcoming event.
                </div>
             </div>
-            <img src="../assets/images/purplestar.svg" class="timeline-purple-star" />
+            <img src="../assets/images/purplestar.svg" class="timeline-purple-star scale-star" />
             <div class="grid grid-cols-12 mt-10 items-end text-white ">
                <div class="hidden md:block md:col-span-5">
                   <div>
@@ -385,7 +400,7 @@
 
 
 
-            <div class="grid grid-cols-12 mt-10 items-end text-white ">
+            <div class="grid grid-cols-12 mt-10 items-end text-white">
                <div class="hidden md:block md:col-span-5">
                   <div>
                      <div class="monserrat-semibold text-[#D434FE] text-right mb-3">Getlinked Hackathon 1.0 Offically
@@ -456,8 +471,10 @@
             <div class="grid md:grid-cols-3">
                <div class="md:col-span-2"></div>
                <div class="md:col-span-1">
-                  <div class="clashdisplay-bold text-white text-4xl text-center md:text-left">Prizes and
-                     <br /><span class="text-[#D434FE]">Rewards</span>
+                  <div ref="elementsix">
+                  <Typed :options="rewards" v-if="toggleRewards">
+                    <div class="typing clashdisplay-bold text-white text-4xl text-center md:text-left"></div>
+                  </Typed>
                   </div>
                   <div class="monserrat-reg text-white leading-7 mt-5 text-center md:text-left">
                      Highlight of the prizes or rewards for winners and<br /> for participants.
@@ -477,7 +494,11 @@
       <div class="border-b border-b-[rgba(255,255,255,0.18)]">
          <div class="container mx-auto py-[6rem]">
             <div class="text-center">
-               <div class="clashdisplay-bold text-white text-4xl">Partners and Sponsors</div>
+               <div ref="elementseven">
+                  <Typed :options="partners" v-if="togglePartners">
+                    <div class="typing clashdisplay-bold text-white text-4xl"></div>
+                  </Typed>
+                  </div>
                <div class="monserrat-reg text-white mt-5">
                   Getlinked Hackathon 1.0 is honored to have the following major
                   companies as its partners and sponsors
@@ -494,8 +515,10 @@
          <div class="container mx-auto py-10">
             <div class="grid md:grid-cols-2 gap-10 items-center text-white ">
                <div class="">
-                  <div class="clashdisplay-bold text-white text-4xl text-center md:text-left">Privacy Policy and
-                     <br /><span class="text-[#D434FE]">Terms</span>
+                  <div ref="elementeight">
+                  <Typed :options="privacy" v-if="togglePrivacy">
+                    <div class="typing clashdisplay-bold text-white text-4xl text-center md:text-left"></div>
+                  </Typed>
                   </div>
                   <div class="text-opacity-75 text-sm font-normal font-['Montserrat'] leading-7 mt-5">Last updated on
                      September 12, 2023</div>
@@ -553,6 +576,7 @@ import {
    initTE,
 } from "tw-elements";
 
+
 const options = {
    strings: ["getlinked Tech <br /> Hackathon <span class='text-[#D434FE]'>1.0</span>"],
    loop: false,
@@ -565,18 +589,78 @@ const mantra = {
    typeSpeed: 40,
 };
 
-// const introduction = {
-//     strings: ["Introduction to getlinked <br /><span class='text-[#D434FE]'>tech Hackathon 1.0</span>"],
-//     loop: false,
-//     typeSpeed: 40,
-// };
+const introduction = {
+    strings: ["Introduction to getlinked <br /><span class='text-[#D434FE]'>tech Hackathon 1.0</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const rules = {
+    strings: ["Rules and <br /><span class='text-[#D434FE]'>Guidelines</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const judge = {
+    strings: ["Judging Criteria <br /><span class='text-[#D434FE]'>Key attributes</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const questions = {
+    strings: ["Frequently Ask<br /><span class='text-[#D434FE]'>Question</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const timelines = {
+    strings: ["Timelines"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const rewards = {
+    strings: ["Prizes and <br /><span class='text-[#D434FE]'>Rewards</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const partners = {
+    strings: ["Partners and Sponsors"],
+    loop: false,
+    typeSpeed: 20,
+};
+
+const privacy = {
+    strings: ["Privacy Policy and <br /><span class='text-[#D434FE]'>Terms</span>"],
+    loop: false,
+    typeSpeed: 20,
+};
 
 const hour = ref(4);
 const minutes = ref(60);
 const seconds = ref(60);
+const elementone = ref(null)
+const elementtwo = ref(null)
+const elementthree = ref(null)
+const elementfour = ref(null)
+const elementfive = ref(null)
+const elementsix = ref(null)
+const elementseven = ref(null)
+const elementeight = ref(null)
+// const { $hello } = useNuxtApp()
+const toggleIntroduction = ref(false)
+const toggleRules = ref(false)
+const toggleJudge = ref(false)
+const toggleQuestions = ref(false)
+const toggleTimelines = ref(false)
+const toggleRewards = ref(false)
+const togglePartners = ref(false)
+const togglePrivacy = ref(false)
 
 onMounted(() => {
    initTE({ Collapse, Ripple });
+   
 
    setInterval(() => {
       seconds.value -= 1
@@ -593,34 +677,154 @@ onMounted(() => {
 })
 
 const reloadpage = (type) => {
-    // window.location.reload(true)
     if (type == 1) {
         window.location.href = `${window.location.origin}/register`
     } else {
         window.location.href = `${window.location.origin}/contactus`
     }
 }
-// const isScrolledIntoView = (e, el) => {
-//    console.log(e, 'event');
-//    console.log(el, 'undefinedd');
-//    if (!el) {
-//       console.log(el, 'undefined');
-//       return;
-//    }
-//  var rect = el.getBoundingClientRect();
-//  var elemTop = rect.top;
-//  var elemBottom = rect.bottom;
 
-//  // Only completely visible elements return true:
-//  var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-//  // Partially visible elements return true:
-//  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-//  console.log(isVisible, 'visible');
-// //  return isVisible;
-// }
-// onUpdated (() => {
-//    window.addEventListener('scroll', isScrolledIntoView(sclll.value)) // Fire myFunction when you scroll/are scrolling, but only every 1000ms.
-// })
+function isElementVisible(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  function checkElementVisibilityone() {
+     let yourElement;
+    yourElement = elementone.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+         toggleIntroduction.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleIntroduction.value = false
+    }
+  }
+  
+  function checkElementVisibilitytwo() {
+     let yourElement;
+    yourElement = elementtwo.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      toggleRules.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleRules.value = false
+    }
+  }
+
+  function checkElementVisibilitythree() {
+     let yourElement;
+    yourElement = elementthree.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      toggleJudge.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleJudge.value = false
+    }
+  }
+  
+  function checkElementVisibilityfour() {
+     let yourElement;
+    yourElement = elementfour.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      toggleQuestions.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleQuestions.value = false
+    }
+  }
+  
+  function checkElementVisibilityfive() {
+     let yourElement;
+    yourElement = elementfive.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      toggleTimelines.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleTimelines.value = false
+    }
+  }
+  
+  function checkElementVisibilitysix() {
+     let yourElement;
+    yourElement = elementsix.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      toggleRewards.value = true
+   } else {
+      // Element is not visible, do something else
+      toggleRewards.value = false
+    }
+  }
+ 
+  function checkElementVisibilityseven() {
+     let yourElement;
+    yourElement = elementseven.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      togglePartners.value = true
+   } else {
+      // Element is not visible, do something else
+      togglePartners.value = false
+    }
+  }
+  
+  function checkElementVisibilityeight() {
+     let yourElement;
+    yourElement = elementeight.value
+    if (!yourElement) {
+      return;
+    }
+    if (isElementVisible(yourElement)) {
+      // Element is visible, do something
+      togglePrivacy.value = true
+   } else {
+      // Element is not visible, do something else
+      togglePrivacy.value = false
+    }
+  }
+  
+  // Attach the scroll event listener to the window or container
+  window.addEventListener('scroll', checkElementVisibilityone);
+  window.addEventListener('scroll', checkElementVisibilitytwo);
+  window.addEventListener('scroll', checkElementVisibilitythree);
+  window.addEventListener('scroll', checkElementVisibilityfour);
+  window.addEventListener('scroll', checkElementVisibilityfive);
+  window.addEventListener('scroll', checkElementVisibilitysix);
+  window.addEventListener('scroll', checkElementVisibilityseven);
+  window.addEventListener('scroll', checkElementVisibilityeight);
+
+
+
 
 
 // const handleScroll = () => { // The main function you want fired by scrolling.
